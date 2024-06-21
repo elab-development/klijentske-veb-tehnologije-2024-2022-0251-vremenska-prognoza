@@ -1,0 +1,30 @@
+[
+  {
+    "title": "A powerful heat dome is just one of the extreme weather hazards coming next week",
+    "createdAt": "2024-05-12T00:00:00.000Z",
+    "image": {
+      "src": "/static/cover-a99ccda8.webp",
+      "height": 653,
+      "width": 1160,
+      "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAUADMDOJbACdADW0agAAPJIIvQiYc0snuT67yT4vVgAAAA=",
+      "blurWidth": 8,
+      "blurHeight": 5
+    },
+    "mdx": "const{Fragment:e,jsx:t,jsxs:n}=arguments[0];function _createMdxContent(a){const r={h1:\"h1\",p:\"p\",strong:\"strong\",...a.components};return n(e,{children:[t(r.h1,{children:\"Heat dome to bring intense heat wave for millions\"}),\"\\n\",t(r.p,{children:\"Heat arrived in the eastern half of the country Friday, but it’s just an appetizer of what’s to come.\"}),\"\\n\",n(r.p,{children:[\"An expansive and exceptionally \",t(r.strong,{children:\"strong heat\"}),\" dome builds Sunday over the East and expands to reach the Midwest and Great Lakes over the following days, ushering in the regions’ first significant heat wave of the year. Heat domes trap air in place and bake it with abundant sunshine for days on end, making each day hotter than the last.\"]}),\"\\n\",t(r.p,{children:\"This one will make temperatures skyrocket to levels hotter than even the hottest typical summer day.\"}),\"\\n\",t(r.p,{children:\"Hundreds of temperature records could fall by the end of next week, both during the day and at night.\"}),\"\\n\",n(r.p,{children:[\"Temperatures will top out 15 to 20 degrees \",t(r.strong,{children:\"above normal\"}),\" over a huge portion of the eastern half of the country Monday afternoon, but surge even higher to reach 25 degrees above normal at times from Tuesday through Friday.\"]}),\"\\n\",t(r.p,{children:\"This translates to days of high temperatures well into the 90s for tens of millions of people who don’t typically bake in long-lasting heat.\"}),\"\\n\",t(r.p,{children:\"Relief from the heat won’t be found at night, which is another symptom of a warming world. Overnight low temperatures aren’t expected to drop below the low 70s or upper 60s in many locations.\"}),\"\\n\",t(r.p,{children:\"To make matters worse, humidity will work in tandem with extreme heat to send the heat index – how heat feels to the human body – to dangerous triple digits in parts of the East. Heat index values in the low 100s are possible as far north as Maine next week.\"}),\"\\n\",n(r.p,{children:[\"The \",t(r.strong,{children:\"health risks\"}),\" from heat will reach extreme levels for millions next week, according to a scale from the National Weather Service and CDC. Heat is the deadliest form of weather in the US, killing more than twice as many people each year on average as hurricanes and tornadoes combined.\"]})]})}return{default:function(e={}){const{wrapper:n}=e.components||{};return n?t(n,{...e,children:t(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "slug": "heat-dome-summer-hurricane-climate"
+  },
+  {
+    "title": "‘Catastrophic flash flooding possible’ with heavy rain falling on still-flooded South Florida",
+    "createdAt": "2024-05-19T00:00:00.000Z",
+    "image": {
+      "src": "/static/cover-47e60423.webp",
+      "height": 653,
+      "width": 1160,
+      "blurDataURL": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAABwAQCdASoIAAUADMDOJaQAApZoAAD2AAaHoAAA",
+      "blurWidth": 8,
+      "blurHeight": 5
+    },
+    "mdx": "const{Fragment:e,jsx:a,jsxs:n}=arguments[0];function _createMdxContent(r){const o={h1:\"h1\",p:\"p\",strong:\"strong\",...r.components};return n(e,{children:[a(o.h1,{children:\"Heavy rain falling on still-flooded South Florida\"}),\"\\n\",n(o.p,{children:[a(o.strong,{children:\"Heavy rainfall\"}),\" has been inundating South Florida for a third day in a row on Thursday, with flash flood warnings in effect from Miami to Fort Lauderdale, after Wednesday’s storms transformed roads into canals and caused water to seep into homes.\"]}),\"\\n\",a(o.p,{children:\"Flash flooding is likely to occur at a faster rate than usual as the areas around Miami are already saturated from more than a foot of rain in the past two days.\"}),\"\\n\",n(o.p,{children:[\"Nearly 1.7 million people living in South Florida – including the cities of Hialeah, Aventura and Doral – are under a flash flood warning Thursday evening as a line of storms approach the Miami area and bring the potential to produce \",a(o.strong,{children:\"several inches of rain\"}),\" in a short period of time, according to the Miami-South Florida office of the National Weather Service.\"]}),\"\\n\",a(o.p,{children:\"“Significant flash flooding (is) expected over urban areas, (with) locally catastrophic flash flooding possible,” the Weather Prediction Center warned earlier Thursday.\"}),\"\\n\",a(o.p,{children:\"High risk days are exceedingly rare — happening on fewer than 4% of days each year on average — but account for more than 80% of all flood damage and more than a third of all flood deaths in the US.\"}),\"\\n\",n(o.p,{children:[\"More than \",a(o.strong,{children:\"8 million people are under flood alerts\"}),\" Thursday, including Fort Lauderdale, Miami and Naples. Another 4 to 8 inches of widespread rain is expected through Friday, but it’s possible some spots record nearly a foot of rain.\"]}),\"\\n\",a(o.p,{children:\"Six to more than 20 inches of rain has deluged South Florida since Tuesday morning, prompting Florida Gov. Ron DeSantis to declare a state of emergency for Broward, Collier, Lee, Miami-Dade and Sarasota counties. While the state is no stranger to drenching rain, heavy rain events are getting even heavier as the world warms due to fossil fuel pollution.\"})]})}return{default:function(e={}){const{wrapper:n}=e.components||{};return n?a(n,{...e,children:a(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "slug": "heavy-rain-falling-florida"
+  }
+]
