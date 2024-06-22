@@ -14,7 +14,7 @@ function App() {
   return (
     <ForecastProvider>
       <Router>
-        <ThemeProvider defaultTheme="dark" storageKey="theme">
+        <ThemeProvider defaultTheme="system" storageKey="theme">
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
