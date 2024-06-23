@@ -1,5 +1,6 @@
 import { MDXContent } from "@/components/mdx-content";
 import { getPostBySlug } from "@/lib/get-content";
+import { DateFormatter } from "@/models/date-formatter";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -32,12 +33,7 @@ const Post = () => {
           Back
         </Link>
         <p className="mt-2 text-gray-500">
-          {new Date(data.createdAt).toLocaleDateString("en-US", {
-            weekday: "short",
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })}
+          {new DateFormatter(new Date(data.createdAt)).formatWithFullDate()}
         </p>
         <h1 className="text-4xl font-semibold underline sm:text-5xl">
           {data?.title}

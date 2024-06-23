@@ -1,4 +1,5 @@
 import { useToast } from "@/components/ui/use-toast";
+import { ToastClass } from "@/models/toast-class";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -19,11 +20,11 @@ const SignUp = () => {
   });
   async function onSubmit() {
     form.reset();
-    toast({
-      title: "You have successfully signed!",
-      description: "We will get back to you soon.",
-      duration: 2500,
-    });
+    toast(
+      ToastClass.create()
+        .setTitle("You have successfully signed!")
+        .setDescription("We will get back to you soon."),
+    );
   }
 
   return (

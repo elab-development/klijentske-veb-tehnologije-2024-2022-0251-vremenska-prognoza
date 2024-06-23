@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/components/ui/use-toast";
+import { ToastClass } from "@/models/toast-class";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -41,11 +42,11 @@ const ContactForm = () => {
 
   async function onSubmit() {
     form.reset();
-    toast({
-      title: "Message sent successfully",
-      description: "We will get back to you soon!",
-      duration: 2500,
-    });
+    toast(
+      ToastClass.create()
+        .setTitle("Message sent successfully")
+        .setDescription("We will get back to you soon!"),
+    );
   }
 
   return (

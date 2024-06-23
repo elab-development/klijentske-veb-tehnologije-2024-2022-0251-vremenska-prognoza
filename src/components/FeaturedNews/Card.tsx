@@ -1,4 +1,5 @@
 import { Blog } from ".velite";
+import { DateFormatter } from "@/models/date-formatter";
 import { Link } from "react-router-dom";
 
 const Card = ({ post, index }: { post: Blog; index: number }) => {
@@ -14,12 +15,7 @@ const Card = ({ post, index }: { post: Blog; index: number }) => {
         alt={post.slug}
       />
       <p className="mt-2 text-foreground/50">
-        {new Date(post.createdAt).toLocaleDateString("en-US", {
-          weekday: "short",
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })}
+        {new DateFormatter(post.createdAt).formatWithFullDate()}
       </p>
       <h2 className="text-xl font-semibold underline">{post.title}</h2>
     </Link>

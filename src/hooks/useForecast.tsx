@@ -1,5 +1,7 @@
 import { ToastAction } from "@/components/ui/toast";
 import { toast } from "@/components/ui/use-toast";
+import { DateFormatter } from "@/models/date-formatter";
+import { ToastClass } from "@/models/toast-class";
 import axios from "axios";
 import { createContext, useContext, useEffect, useState } from "react";
 
@@ -57,6 +59,14 @@ const useForecast = () => {
         .then((res) => {
           const data = res.data;
           const fiveDaysForecast: DataForecast[] = [];
+          const localTime = new Date();
+          const localOffset = localTime.getTimezoneOffset() * 60000;
+          const utcTime = localTime.getTime() + localOffset;
+          const timezoneOffset = data.city.timezone * 1000;
+          const formattedDestinationTime = new DateFormatter(
+            new Date(utcTime + timezoneOffset),
+          ).formatWithTime();
+
           for (let i = 0; i < 5; i++) {
             const dayForecast = data.list.slice(i * 8, (i + 1) * 8);
             fiveDaysForecast.push({
@@ -68,20 +78,11 @@ const useForecast = () => {
               temp_min: Math.min(
                 ...dayForecast.map((item: any) => item.main.temp_min),
               ),
-              day: new Date(dayForecast[0].dt * 1000),
+              day: new Date(utcTime + timezoneOffset + i * 86400000),
             });
           }
-
-          const date: Date = new Date(data.list[0].dt * 1000);
-          const formattedDate: string = `${date.toLocaleDateString("en-US", { weekday: "long" })} ${date.toLocaleTimeString(
-            [],
-            {
-              hour: "2-digit",
-              hour12: false,
-            },
-          )}:00`;
           if (shouldChangeData) {
-            setDateTime(formattedDate);
+            setDateTime(formattedDestinationTime);
             setForecast({
               now: data.list[0],
               fiveDays: fiveDaysForecast,
@@ -95,13 +96,14 @@ const useForecast = () => {
             console.log("Request was aborted");
             return;
           }
-          toast({
-            variant: "destructive",
-            title: "Uh oh! Something went wrong.",
-            description: "Please check your location and try again.",
-            action: <ToastAction altText="Try again">Try again</ToastAction>,
-            duration: 2500,
-          });
+          toast(
+            ToastClass.create("destructive")
+              .setTitle("Uh oh! Something went wrong.")
+              .setDescription("Please check your location and try again.")
+              .setAction(
+                <ToastAction altText="Try again">Try again</ToastAction>,
+              ),
+          );
         })
         .finally(() => {
           setIsLoading(false);
